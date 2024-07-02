@@ -7,18 +7,17 @@ namespace Week2Homework
     {
         static void Main(string[] args)
         {
+            MenuMethods menuMethods = new MenuMethods();
+
             BodyType bodyType = new BodyType();
+
             CarListMethods carListMethods = new CarListMethods();
+
+            menuMethods = MenuOptions(menuMethods);
+
             while (true)
             {
-                Console.WriteLine("Welcome in your used car dealer");
-                Console.WriteLine("Choose what you wanna do...");
-                Console.WriteLine("1.Add car");
-                Console.WriteLine("2.Remove car");
-                Console.WriteLine("3.Check a specific car");
-                Console.WriteLine("4.Check your cars");
-                Console.WriteLine("5.Change car settings");
-                Console.WriteLine("Press 1,2 or 3...");
+                menuMethods.MenuListOptions();
 
                 string choosenMenuCathegory = Console.ReadLine();
 
@@ -60,6 +59,15 @@ namespace Week2Homework
                         break;
                 }
             }
+        }
+        public static MenuMethods MenuOptions(MenuMethods menuMethods)
+        {
+            menuMethods.AddNewMenuOption(1, "Add car");
+            menuMethods.AddNewMenuOption(2, "Remove car");
+            menuMethods.AddNewMenuOption(3, "Check a specific car");
+            menuMethods.AddNewMenuOption(4, "Check your cars");
+            menuMethods.AddNewMenuOption(5, "Change car settings");
+            return menuMethods;
         }
     }
 }
