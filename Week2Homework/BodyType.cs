@@ -14,6 +14,7 @@ namespace Week2Homework
 
             return boardBodyType;
         }
+        
         public int NumberCarBodyType(string[] boardBodyType)
         {
             int parsedChoosenBodyNumber = 0;
@@ -38,6 +39,7 @@ namespace Week2Homework
             }
             return parsedChoosenBodyNumber;
         }
+        
         public string NameCarBodyType(int parsedChoosenBodyType, string[] boardBodyType)
         {
             int boardCountdown = 0;
