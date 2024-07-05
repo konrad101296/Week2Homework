@@ -17,6 +17,7 @@ namespace Week2Homework
         {
             carList = new List<CarList>();
         }
+        
         public void AddCar(string choosenBoardName)
         {
             CarList newCar = new CarList();
@@ -41,6 +42,7 @@ namespace Week2Homework
 
             carList.Add(newCar);
         }
+        
         public void DeleteCar()
         {
             CarList carToRemove = new CarList();
@@ -65,6 +67,7 @@ namespace Week2Homework
             }
             carList.Remove(carToRemove);
         }
+        
         public void CheckCar()
         {
             CarList carToCheck = new CarList();
@@ -95,6 +98,7 @@ namespace Week2Homework
                 Console.WriteLine("------------------------------");
             }
         }
+        
         public void CheckAllCars()
         {
             Console.WriteLine("------------------------------");
@@ -108,6 +112,7 @@ namespace Week2Homework
                 Console.WriteLine("------------------------------");
             }
         }
+        
         public void ChangeCarSettings(string carToChange)
         {
             CarList changedCar = new CarList();
@@ -129,6 +134,7 @@ namespace Week2Homework
             }
             carList.Remove(changedCar);
         }
+        
         public void AddChangedCar(string choosenBoardName2, string carToChange)
         {
             CarList changedCar = new CarList();
@@ -151,6 +157,7 @@ namespace Week2Homework
 
             carList.Add(changedCar);
         }
+        
         public int CheckPresenceOnList(string carToChange)
         {
 
