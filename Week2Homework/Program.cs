@@ -15,7 +15,9 @@ namespace Week2Homework
 
             menuMethods = MenuOptions(menuMethods);
 
-            while (true)
+            bool exit = true;
+
+            while (exit)
             {
                 menuMethods.MenuListOptions();
 
@@ -54,12 +56,16 @@ namespace Week2Homework
                             carListMethods.AddChangedCar(choosenBoardName2, carToChange);
                         }
                         break;
+                    case 6:
+                        exit = false;
+                        break;
                     default:
                         Console.WriteLine("You press wrong key try agien");
                         break;
                 }
             }
         }
+
         public static MenuMethods MenuOptions(MenuMethods menuMethods)
         {
             menuMethods.AddNewMenuOption(1, "Add car");
@@ -67,6 +73,7 @@ namespace Week2Homework
             menuMethods.AddNewMenuOption(3, "Check a specific car");
             menuMethods.AddNewMenuOption(4, "Check your cars");
             menuMethods.AddNewMenuOption(5, "Change car settings");
+            menuMethods.AddNewMenuOption(6, "Exit from application");
             return menuMethods;
         }
     }
