@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +8,14 @@ namespace Week2Homework
 {
     public class BodyType
     {
-        public string[] BoardBodyType()
+        public string[] ArrayBodyType()
         {
-            string[] boardBodyType = { "Small Car", "City Car", "Coupe", "Cabriolet", "Combi", "Compact", "Minivan", "Sedan", "SUV" };
+            string[] arrayBodyType = { "Small Car", "City Car", "Coupe", "Convertible", "Estate", "Compact", "Minivan", "Saloon", "SUV" };
 
-            return boardBodyType;
+            return arrayBodyType;
         }
-        
-        public int NumberCarBodyType(string[] boardBodyType)
+
+        public int NumberCarBodyType(string[] arrayBodyType)
         {
             int parsedChoosenBodyNumber = 0;
             for (int i = 0; i < 1; i++)
@@ -23,7 +23,7 @@ namespace Week2Homework
                 Console.WriteLine("Please enter body type, press the appropriate number...");
 
                 int order = 0;
-                foreach (var item in boardBodyType)
+                foreach (var item in arrayBodyType)
                 {
                     order++;
                     Console.WriteLine(order + " " + item);
@@ -33,27 +33,27 @@ namespace Week2Homework
                 Int32.TryParse(choosenBodyType, out parsedChoosenBodyNumber);
                 if (parsedChoosenBodyNumber < 1 || parsedChoosenBodyNumber > 9)
                 {
-                    Console.WriteLine("You choosen bad number try agien...");
+                    Console.WriteLine("You chose a bad number try agien...");
                     i--;
                 }
             }
             return parsedChoosenBodyNumber;
         }
-        
-        public string NameCarBodyType(int parsedChoosenBodyType, string[] boardBodyType)
+
+        public string NameCarBodyType(int parsedChoosenBodyType, string[] arrayBodyType)
         {
-            int boardCountdown = 0;
-            string choosenBoardName = null;
-            foreach (var item in boardBodyType)
+            int arrayCountdown = 0;
+            string choosenArrayName = null;
+            foreach (var item in arrayBodyType)
             {
-                boardCountdown++;
-                if (boardCountdown == parsedChoosenBodyType)
+                arrayCountdown++;
+                if (arrayCountdown == parsedChoosenBodyType)
                 {
-                    choosenBoardName = item;
+                    choosenArrayName = item;
                     break;
                 }
             }
-            return choosenBoardName;
+            return choosenArrayName;
         }
     }
 }
