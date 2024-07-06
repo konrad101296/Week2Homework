@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Week2Homework
@@ -30,10 +30,10 @@ namespace Week2Homework
                 switch (parsedMenuCathegory)
                 {
                     case 1:
-                        var boardBodyType = bodyType.BoardBodyType();
-                        var parsedChoosenBodyNumber = bodyType.NumberCarBodyType(boardBodyType);
-                        var choosenBoardName = bodyType.NameCarBodyType(parsedChoosenBodyNumber, boardBodyType);
-                        carListMethods.AddCar(choosenBoardName);
+                        var arrayBodyType = bodyType.ArrayBodyType();
+                        var parsedChoosenBodyNumber = bodyType.NumberCarBodyType(arrayBodyType);
+                        var choosenArrayName = bodyType.NameCarBodyType(parsedChoosenBodyNumber, arrayBodyType);
+                        carListMethods.AddCar(choosenArrayName);
                         break;
                     case 2:
                         carListMethods.DeleteCar();
@@ -50,17 +50,17 @@ namespace Week2Homework
                         carListMethods.ChangeCarSettings(carToChange);
                         if (checkPresence == 1)
                         {
-                            var boardBodyType2 = bodyType.BoardBodyType();
-                            var parsedChoosenBodyNumber2 = bodyType.NumberCarBodyType(boardBodyType2);
-                            var choosenBoardName2 = bodyType.NameCarBodyType(parsedChoosenBodyNumber2, boardBodyType2);
-                            carListMethods.AddChangedCar(choosenBoardName2, carToChange);
+                            var arrayBodyType2 = bodyType.ArrayBodyType();
+                            var parsedChoosenBodyNumber2 = bodyType.NumberCarBodyType(arrayBodyType2);
+                            var choosenArrayName2 = bodyType.NameCarBodyType(parsedChoosenBodyNumber2, arrayBodyType2);
+                            carListMethods.AddChangedCar(choosenArrayName2, carToChange);
                         }
                         break;
                     case 6:
                         exit = false;
                         break;
                     default:
-                        Console.WriteLine("You press wrong key try agien");
+                        Console.WriteLine("You pressed a wrong key try agien");
                         break;
                 }
             }
